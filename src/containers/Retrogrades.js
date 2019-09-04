@@ -32,13 +32,20 @@ class Retrogrades extends React.Component {
       <div className="App">
       <header className="App-header">
       <div className="retrogrades">
-      <h3> Dis Da Retrogrades </h3>
+      <h3> Planets in Retrograde </h3>
       </div>
 
 
       <div id="planets">
 
-      <Mercury retrogrades={this.props.retrogrades} onClick = {() => this.handleClickPlanet('Mercury')} />
+      <Mercury retrogrades={this.props.retrogrades} />
+      <Mars retrogrades={this.props.retrogrades} />
+      <Venus retrogrades={this.props.retrogrades} />
+      <Jupiter retrogrades={this.props.retrogrades} />
+      <Saturn retrogrades={this.props.retrogrades} />
+      <Pluto retrogrades={this.props.retrogrades} />
+      <Neptune retrogrades={this.props.retrogrades} />
+      <Uranus retrogrades={this.props.retrogrades} />
 
 
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 // import { BrowserRouter as Route, Link } from 'react-router-dom'
 import '../App.css';
-import earthimg from '../images/earth.png'
+import merimg from '../images/mercury.png'
 
 class Mercury extends React.Component {
   constructor() {
@@ -16,6 +16,9 @@ class Mercury extends React.Component {
     this.setState({
       isPlanetClicked: !this.state.isPlanetClicked,
     })
+  }
+
+  componentDidMount() {
     let today = new Date();
     let from = new Date('2019-03-05');
     let to = new Date('2019-03-28');
@@ -29,7 +32,6 @@ class Mercury extends React.Component {
     let to4 = new Date('2020-07-12');
     let from5 = new Date('2020-10-14');
     let to5 = new Date('2020-11-03');
-
     if (from < today && today < to) {
       this.setState({isRetrograde: true})
     } else if (from1 < today && today < to1) {
@@ -53,22 +55,12 @@ class Mercury extends React.Component {
 render() {
   return (
     <div className="bg">
-    <img onClick = {() => this.handleClickPlanet('Mercury')} src={earthimg}/>
+    <img onClick = {() => this.handleClickPlanet('Mercury')} src={merimg}/>
     <p> {(this.props.retrogrades[0] && this.state.isPlanetClicked) ? this.props.retrogrades[0].explanation : null } </p>
-    <p> {(this.state.isRetrograde) ? 'it my fault' : 'not my fault' } </p>
+    <p> {(this.state.isRetrograde) ? 'it do be like dat' : 'not my fault' } </p>
     </div>
   );
 }
 }
 
 export default Mercury;
-
-//   var today = new Date();
-// var dd = String(today.getDate()).padStart(2, '0');
-// var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-// var yyyy = today.getFullYear();
-//
-// today = mm + '/' + dd + '/' + yyyy;
-// document.write(today);
-
-// <p> {(this.state.isRetrograde)} <p>

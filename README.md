@@ -73,7 +73,7 @@ Pluto: April 24, 2019 - Oct 3, 2019
 Neptune: June 21 2019- November 27, 2019
         June 23 2020 - November 29, 2020
 
-Uranus: August, 7th, 2018-January 6th, 2019
+Uranus:
         August 12, 2019 - January 1, 2020
         August 15, 2020 - January 1, 2021
 

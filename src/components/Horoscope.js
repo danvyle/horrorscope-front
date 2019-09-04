@@ -19,8 +19,8 @@ constructor() {
     return (
       <div className="horoscope">
       <h1> Your Daily Horoscope </h1>
-        <p>{(this.props.horoscopes[4]) ? this.props.horoscopes[4].daily_horoscope : null }
-</p>
+        <h2>{(this.props.horoscopes[4]) ? this.props.horoscopes[4].daily_horoscope : null }
+</h2>
             </div>
         );
 
