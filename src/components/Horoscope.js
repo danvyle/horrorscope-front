@@ -15,7 +15,7 @@ constructor() {
 
 
   render() {
-    console.log(this.props.horoscopes)
+
     return (
       <div className="horoscope">
       <h1> Your Daily Horoscope </h1>
