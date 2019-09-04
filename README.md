@@ -66,3 +66,30 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+  // this.setState({ horoscopes : data.horoscopes })))
+
+  <Route exact path='/planets/mercury'  exact component={Mercury} />
+  <Route exact path='/planets/venus'  exact component={Venus} />
+  <Route exact path='/planets/mars'  exact component={Mars} />
+  <Route exact path='/planets/jupiter'  exact component={Jupiter} />
+  <Route exact path='/planets/saturn'  exact component={Saturn} />
+  <Route exact path='/planets/pluto'  exact component={Pluto} />
+  <Route exact path='/planets/neptune'  exact component={Neptune} />
+  <Route exact path='/planets/uranus'  exact component={Uranus} />
+
+
+  <Route exact path='/capricorn'  exact component={Capricorn} />
+  <Route exact path='/aquarius'  exact component={Aquarius} />
+  <Route exact path='/pisces'  exact component={Pisces} />
+  <Route exact path='/aries'  exact component={Aries} />
+  <Route exact path='/taurus'  exact component={Taurus} />
+  <Route exact path='/gemini'  exact component={Gemini} />
+  <Route exact path='/cancer'  exact component={Cancer} />
+  <Route exact path='/leo'  exact component={Leo} />
+  <Route exact path='/virgo'  exact component={Virgo} />
+  <Route exact path='/libra'  exact component={Libra} />
+  <Route exact path='/scorpio'  exact component={Scorpio} />
+  <Route exact path='/sagittarius'  exact component={Sagittarius} />
