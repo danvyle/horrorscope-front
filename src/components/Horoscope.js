@@ -4,27 +4,22 @@ import '../App.css';
 
 
 class Horoscope extends React.Component {
-constructor() {
-  super()
-  this.state = {
-    dailyHoroscope: null
-  }
-}
-
-
 
 
   render() {
 
     return (
       <div className="horoscope">
-      <h1> Your Daily Horoscope </h1>
-        <h2>{(this.props.horoscopes[4]) ? this.props.horoscopes[4].daily_horoscope : null }
-</h2>
-            </div>
-        );
+        <h3> DAILY HOROSCOPE </h3>
+        <div className='horoscope-nav'>
+          <p>{(this.props.horoscopes[0]) ? this.props.horoscopes[this.props.horoscopes.length-1].daily_horoscope : null } </p>
 
-    }
+        </div>
+
+      </div>
+    );
+
   }
+}
 
-  export default Horoscope;
+export default Horoscope;

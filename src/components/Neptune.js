@@ -41,7 +41,7 @@ class Neptune extends React.Component {
     return (
       <div className="bg">
         <img onClick = {() => this.handleClickPlanet('Neptune')} src={nepimg}/>
-        <p> {(this.state.isRetrograde) ? 'it do be like dat' : 'not my fault' } </p>
+        <p> {(this.state.isRetrograde) ? 'Neptune is in retrograde' : null } </p>
         <p> {(this.props.retrogrades[6] && this.state.isPlanetClicked) ? this.props.retrogrades[6].explanation : null } </p>
       </div>
     );

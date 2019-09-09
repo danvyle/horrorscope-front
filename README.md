@@ -96,14 +96,6 @@ Mars: 9th September-14th November 2020
 
   // this.setState({ horoscopes : data.horoscopes })))
 
-  <Route exact path='/planets/mercury'  exact component={Mercury} />
-  <Route exact path='/planets/venus'  exact component={Venus} />
-  <Route exact path='/planets/mars'  exact component={Mars} />
-  <Route exact path='/planets/jupiter'  exact component={Jupiter} />
-  <Route exact path='/planets/saturn'  exact component={Saturn} />
-  <Route exact path='/planets/pluto'  exact component={Pluto} />
-  <Route exact path='/planets/neptune'  exact component={Neptune} />
-  <Route exact path='/planets/uranus'  exact component={Uranus} />
 
 
   <Route exact path='/capricorn'  exact component={Capricorn} />
@@ -118,11 +110,3 @@ Mars: 9th September-14th November 2020
   <Route exact path='/libra'  exact component={Libra} />
   <Route exact path='/scorpio'  exact component={Scorpio} />
   <Route exact path='/sagittarius'  exact component={Sagittarius} />
-
-  <Link to="/venus"><img value='venus'  onClick = {() => this.handleClickPlanet('Venus')} src={earthimg}></img></Link>
-  <Link to="/mars"><img value='mars' onClick = {() => this.handleClickPlanet('Mars')} src={earthimg}></img></Link>
-  <Link to="/jupiter"><img value='jupiter' onClick = {() => this.handleClickPlanet('Jupiter')} src={earthimg}></img></Link>
-  <Link to="/saturn"><img value='saturn' onClick = {() => this.handleClickPlanet('Saturn')} src={earthimg}></img></Link>
-  <Link to="/pluto"><img value='pluto' onClick = {() => this.handleClickPlanet('Pluto')} src={earthimg}></img></Link>
-  <Link to="/neptune"><img value='neptune' onClick = {() => this.handleClickPlanet('Neptune')} src={earthimg}></img></Link>
-  <Link to="/uranus"><img value='uranus' onClick = {() => this.handleClickPlanet('Uranus')} src={earthimg}></img></Link>

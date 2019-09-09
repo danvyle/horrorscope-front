@@ -37,37 +37,38 @@ class HoroscopeContainer extends React.Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <header className="App-header">
-            <h1>Horrorscope</h1>
+        <div className="Horoscope">
+          <header className="Horoscope-header">
+            <h1 >HORRORSCOPES</h1>
 
-            <h3>WHY YOU SO CRAY?</h3>
-
-
-            <div id="sign-buttons">
-
-              <Link to="/capricorn"><img name='capricorn' onClick = {() => this.props.handleClickSign('Capricorn')} src={capimg}></img></Link>
-              <Link to="/aquarius"><img value='aquarius' onClick = {() => this.props.handleClickSign('Aquarius')} src={aquimg}></img></Link>
-              <Link to="/pisces"><img value='pisces' onClick = {() => this.props.handleClickSign('Pisces')}src={pisimg}></img></Link>
-              <Link to="/aries"><img value='aries' onClick = {() => this.props.handleClickSign('Aries')}src={ariimg}></img></Link>
-              <Link to="/taurus"><img value='taurus' onClick = {() => this.props.handleClickSign('Taurus')}src={tauimg}></img></Link>
-              <Link to="/gemini"><img value='gemini' onClick = {() => this.props.handleClickSign('Gemini')}src={gemimg}></img></Link>
-              <Link to="/cancer"><img value='cancer' onClick = {() => this.props.handleClickSign('Cancer')}src={canimg}></img></Link>
-              <Link to="/leo"><img value='leo' onClick = {() => this.props.handleClickSign('Leo')}src={leoimg}></img></Link>
-              <Link to="/virgo"><img value='virgo' onClick = {() => this.props.handleClickSign('Virgo')}src={virimg}></img></Link>
-              <Link to="/libra"><img value='libra' onClick = {() => this.props.handleClickSign('Libra')}src={libimg}></img></Link>
-              <Link to="/scorpio"><img value='scorpio' onClick = {() => this.props.handleClickSign('Scorpio')}src={scoimg}></img></Link>
-              <Link to="/sagittarius"><img value='sagittarius' onClick = {() => this.props.handleClickSign('Sagittarius')}src={sagimg}></img></Link>
+            <h5>Are you feelin’ a little off kilter? Do you wonder if it’s the planets or if it’s you? If so, you’ve come to the right place!</h5>
 
 
-
+            <div className="signs-container">
+              <div className = 'sign-card'> <Link to="/capricorn"> <img name='capricorn' onClick = {() => this.props.handleClickSign('Capricorn')} src={capimg}></img> </Link>  <div className = 'sign-card-content'>capricorn</div>  </div>
+              <div className = 'sign-card'> <Link to="/aquarius"><img value='aquarius' onClick = {() => this.props.handleClickSign('Aquarius')} src={aquimg}></img> </Link> <div className = 'sign-card-content'> aquarius</div> </div>
+              <div className = 'sign-card'> <Link to="/pisces"><img value='pisces' onClick = {() => this.props.handleClickSign('Pisces')}src={pisimg}></img> </Link> <div className = 'sign-card-content'> pisces</div> </div>
+              <div className = 'sign-card'> <Link to="/aries"><img value='aries' onClick = {() => this.props.handleClickSign('Aries')}src={ariimg}></img> </Link> <div className = 'sign-card-content'> aries</div> </div>
+              <div className = 'sign-card'> <Link to="/taurus"><img value='taurus' onClick = {() => this.props.handleClickSign('Taurus')}src={tauimg}></img> </Link> <div className = 'sign-card-content'> taurus</div> </div>
+              <div className = 'sign-card'> <Link to="/gemini"><img value='gemini' onClick = {() => this.props.handleClickSign('Gemini')}src={gemimg}></img> </Link> <div className = 'sign-card-content'> gemini</div> </div>
             </div>
+
+            <div className='signs-container2'>
+              <div className = 'sign-card2'> <Link to="/cancer"><img value='cancer' onClick = {() => this.props.handleClickSign('Cancer')}src={canimg}></img></Link>   <div className = 'sign-card-content'> cancer</div> </div>
+              <div className = 'sign-card2'> <Link to="/leo"><img value='leo' onClick = {() => this.props.handleClickSign('Leo')}src={leoimg}></img> </Link>  <div className = 'sign-card-content'>leo </div> </div>
+              <div className = 'sign-card2'> <Link to="/virgo"><img value='virgo' onClick = {() => this.props.handleClickSign('Virgo')}src={virimg}></img> </Link>  <div className = 'sign-card-content'>virgo </div> </div>
+              <div className = 'sign-card2'> <Link to="/libra"><img value='libra' onClick = {() => this.props.handleClickSign('Libra')}src={libimg}></img></Link>   <div className = 'sign-card-content'>libra </div> </div>
+              <div className = 'sign-card2'> <Link to="/scorpio"><img value='scorpio' onClick = {() => this.props.handleClickSign('Scorpio')}src={scoimg}></img> </Link>  <div className = 'sign-card-content'>scorpio </div></div>
+              <div className = 'sign-card2'> <Link to="/sagittarius"><img value='sagittarius' onClick = {() => this.props.handleClickSign('Sagittarius')}src={sagimg}></img> </Link>   <div className = 'sign-card-content'>sagittarius </div> </div>
+            </div>
+
+
           </header>
         </div>
       </Router>
-        )
+    )
 
-    }
   }
+}
 
-  export default HoroscopeContainer;
+export default HoroscopeContainer;

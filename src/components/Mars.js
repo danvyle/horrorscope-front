@@ -37,7 +37,7 @@ render() {
     <div className="bg">
     <img onClick = {() => this.handleClickPlanet('Mars')} src={marimg}/>
     <p> {(this.props.retrogrades[1] && this.state.isPlanetClicked) ? this.props.retrogrades[1].explanation : null } </p>
-    <p> {(this.state.isRetrograde) ? 'it do be like dat' : 'not my fault' } </p>
+    <p> {(this.state.isRetrograde) ? 'Mars is in retrograde' : null } </p>
     </div>
   );
 }
