@@ -24,6 +24,7 @@ class App extends React.Component {
     this.state  = {
       isClicked: false,
       sign: null,
+      isFullMoon: '',
     };
     this.comps = {
       Capricorn: <Capricorn />,
@@ -51,27 +52,47 @@ handleClickSign = (name) => {
   })
 }
 
+componentDidMount() {
+  fetch('http://localhost:8888/fetch_moon')
+  .then(resp => resp.json())
+  .then(data => this.setState({isFullMoon: data.status}))
+
+  let today = new Date();
+  let from = new Date('2019-03-05');
+  let to = new Date('2020-01-01');
+  let from1 = new Date('2020-04-25');
+  let to1 = new Date('2021-01-01');
+
+  if (from < today && today < to) {
+    this.setState({isRetrograde: true})
+  } else if (from1 < today && today < to1) {
+    this.setState({isRetrograde: true})
+  }
+}
+
+
 
 
 render() {
   if (this.state.isClicked) {
 
     return(
-    <div className="App">
-      <header className="App-header">
-        {this.comps[this.state.sign] && this.comps[this.state.sign]}
-      </header>
-    </div>)
-  } else {
+      <div className="App">
+        <header className="App-header">
+          {this.comps[this.state.sign] && this.comps[this.state.sign]}
+        </header>
+      </div>)
+    } else {
 
-    return(
-    <div className="App">
-      <header className="App-header"> <HoroscopeContainer handleClickSign = {this.handleClickSign} />
-    </header>
-  </div>)
+      return(
+        <div className="App">
+          <header className="App-header"> <HoroscopeContainer handleClickSign = {this.handleClickSign} />
+        </header>
+      </div>)
+    }
+  }
 }
-}
-}
+
 
 
 export default App;

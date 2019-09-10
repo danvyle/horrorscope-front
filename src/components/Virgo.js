@@ -4,6 +4,8 @@ import '../App.css';
 import Retrogrades from '../containers/Retrogrades'
 import Horoscope from '../components/Horoscope'
 import Moon from '../components/Moon'
+import virimg from '../images/virgo.png'
+
 
 
 class Virgo extends React.Component {
@@ -27,12 +29,16 @@ class Virgo extends React.Component {
 
   render() {
     return (
-      <div className="bg">
-        <h2> Hello! You Virgo, you! </h2>
-        <Retrogrades retrogrades = {this.state.retrogrades}/>
-        <Moon />
-        <Horoscope horoscopes = {this.state.horoscopes}/>
-      </div>
+      <div className= 'horoscope-display'>
+        <div className="horoscope-img"><img src = {virimg}/></div>
+        <div className= "heading-card">
+          <h1 > HORRORSCOPES </h1>
+          <header className="retrograde-header"> LOOKS LIKE THE UNIVERSE IS TO BLAME </header>
+        </div>
+      <div className="retrogrades"><Retrogrades retrogrades = {this.state.retrogrades}/></div>
+      <div className="moon"><Moon /></div>
+      <div className="horoscope"><Horoscope horoscopes = {this.state.horoscopes}/></div>
+    </div>
     );
 
   }

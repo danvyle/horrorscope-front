@@ -42,7 +42,7 @@ render() {
     <div className="bg">
     <img onClick = {() => this.handleClickPlanet('Uranus')} src={uraimg}/>
     <p> {(this.props.retrogrades[7] && this.state.isPlanetClicked) ? this.props.retrogrades[7].explanation : null } </p>
-    <p> {(this.state.isRetrograde) ? 'Uranus is in retrograde' : null } </p>
+    <p> {(this.state.isRetrograde) ? <div className = 'planet-card-content'> Uranus is in retrograde </div> : null } </p>
     </div>
   );
 }

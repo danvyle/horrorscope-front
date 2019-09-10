@@ -43,15 +43,15 @@ class Moon extends React.Component {
 
 
   render() {
-      
+
     if (this.whatMoonPhase() >= 15 && this.whatMoonPhase() <= 18) {
-      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={moon}/> <p> It's a full moon! </p> </div>)
+      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={moon}/> <h6> It's a full moon! </h6> </div>)
     } else if (this.whatMoonPhase() >= 0 && this.whatMoonPhase() <= 7) {
-      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={newmoon}/> <p> It's a new moon </p> </div>)
+      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={newmoon}/> <h6> It's a new moon </h6> </div>)
     } else if (this.whatMoonPhase() > 7 && this.whatMoonPhase() < 15) {
-      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={firstmoon}/> <p> Not quite a full moon </p> </div>)
+      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={firstmoon}/> <h6> Not quite a full moon </h6> </div>)
     } else if (this.whatMoonPhase() >= 18 ) {
-      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={thirdmoon}/> <p> Not quite a full  moon </p> </div>)
+      return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={thirdmoon}/> <h6> Not quite a full  moon </h6> </div>)
     }
   }
 

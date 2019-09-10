@@ -29,28 +29,22 @@ class Retrogrades extends React.Component {
 
 
       <Router>
-      <div className="App">
-      <header className="App-header">
-      <div className="retrogrades">
-      <h3> Planets in Retrograde </h3>
-      </div>
+        <div className="App">
+          <div className="planets-container">
+            <h3>PLANETS IN RETROGRADE</h3>
+
+            <div className = 'planet-card'><Mercury retrogrades={this.props.retrogrades} /></div>
+            <div className = 'planet-card'><Uranus retrogrades={this.props.retrogrades} /></div>
+            <div className = 'planet-card'><Mars retrogrades={this.props.retrogrades} /></div>
+            <div className = 'planet-card'><Pluto retrogrades={this.props.retrogrades} /></div>
+            <div className = 'planet-card'><Venus retrogrades={this.props.retrogrades} /></div>
+            <div className = 'planet-card'><Jupiter retrogrades={this.props.retrogrades} /></div>
+            <div className = 'planet-card'><Saturn retrogrades={this.props.retrogrades} /></div>
+            <div className = 'planet-card'><Neptune retrogrades={this.props.retrogrades} /></div>
 
 
-      <div id="planets">
-
-      <Mercury retrogrades={this.props.retrogrades} />
-      <Mars retrogrades={this.props.retrogrades} />
-      <Venus retrogrades={this.props.retrogrades} />
-      <Jupiter retrogrades={this.props.retrogrades} />
-      <Saturn retrogrades={this.props.retrogrades} />
-      <Pluto retrogrades={this.props.retrogrades} />
-      <Neptune retrogrades={this.props.retrogrades} />
-      <Uranus retrogrades={this.props.retrogrades} />
-
-
-      </div>
-      </header>
-      </div>
+          </div>
+        </div>
       </Router>
 
     );

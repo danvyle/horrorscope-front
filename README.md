@@ -94,6 +94,16 @@ Saturn:  April 30th-September 18th 2019
 
 Mars: 9th September-14th November 2020
 
+
+Pluto: March 5, 2019 - January 1, 2020
+      17th February-10th March 2020  April 25, 2020 - January 1, 2021
+
+
+
+
+
+
+
   // this.setState({ horoscopes : data.horoscopes })))
 
 

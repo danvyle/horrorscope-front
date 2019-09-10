@@ -4,6 +4,7 @@ import '../App.css';
 import Retrogrades from '../containers/Retrogrades'
 import Horoscope from '../components/Horoscope'
 import Moon from '../components/Moon'
+import canimg from '../images/cancer.png'
 
 
 class Cancer extends React.Component {
@@ -27,12 +28,16 @@ class Cancer extends React.Component {
 
   render() {
     return (
-      <div className="bg">
-        <h2> Hello! You Cancer, you! </h2>
-        <Retrogrades retrogrades = {this.state.retrogrades}/>
-        <Moon />
-        <Horoscope horoscopes = {this.state.horoscopes}/>
-      </div>
+      <div className= 'horoscope-display'>
+        <div className="horoscope-img"><img src = {canimg}/></div>
+        <div className= "heading-card">
+          <h1 > HORRORSCOPES </h1>
+          <header className="retrograde-header"> LOOKS LIKE THE UNIVERSE IS TO BLAME </header>
+        </div>
+      <div className="retrogrades"><Retrogrades retrogrades = {this.state.retrogrades}/></div>
+      <div className="moon"><Moon /></div>
+      <div className="horoscope"><Horoscope horoscopes = {this.state.horoscopes}/></div>
+    </div>
     );
 
   }

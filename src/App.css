@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800,900&display=swap');
 
-.App {
-  text-align: center;
-  font-family: Roboto Mono;
-}
 
 .App-header {
   background-color: black;
@@ -16,22 +13,55 @@
   font-family: Roboto Mono;
 }
 
+h2 {
+  display: block;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1.8em;
+  text-shadow:
+  1px 1px 0 #FFFFFF,
+  1px -1px 0 #FFFFFF,
+  -1px 1px 0 #FFFFFF,
+  -1px -1px 0 #FFFFFF,
+  1px 0px 0 #FFFFFF,
+  0px 1px 0 #FFFFFF,
+  -1px 0px 0 #FFFFFF,
+  0px -1px 0px #FFFFFF,
+  1px 1px 1px #FFFFFF,
+  1px 1px 1px #FFFFFF;
+  color: #000000;
+  background: #000000;
+  font-weight: 800;
+  bottom: 0.8em;
+  padding: 1em 0em 0em 0em;
+}
+
 
 h1 {
   display: flex;
-  text-align: justify;
+  text-align: center;
   justify-content: center;
   padding: 0em 10em 0em 10em;
-  font-size: 1em;
+  font-size: .6em;
+  letter-spacing: .4em;
+}
 
+.h1horoscope {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0em 10em 0em 10em;
+  font-size: .6em;
+  letter-spacing: .4em;
 }
 
 h5 {
   display: flex;
   text-align: justify;
   justify-content: center;
-  padding: 0em 15em 0em 15em;
+  padding: 0em 25em 0em 25em;
   font-size: 0.6em;
+  opacity: .9;
 
 }
 
@@ -49,8 +79,14 @@ h5 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 150px;
-  height: 200px;
+  width: 75px;
+  height: 160px;
+  padding: 0em 1.5em 0em 1.5em;
+  opacity: .4;
+}
+
+.sign-card:hover {
+  opacity: 1;
 }
 
 .signs-container2 {
@@ -67,8 +103,14 @@ h5 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 150px;
-  height: 200px;
+  width: 75px;
+  height: 160px;
+  padding: 0em 1.5em 0em 1.5em;
+  opacity: .4;
+}
+
+.sign-card2:hover {
+  opacity: 1;
 }
 
 .sign-card-content{
@@ -77,13 +119,112 @@ h5 {
   font-size: .8em;
 }
 
-@media only screen and (min-device-width: 400px) {
-  body {
+.planets-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0em 5em 0em 5em;
+}
 
-  }
+.planet-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0em 1em 0em 1em;
+  opacity: .5;
+  text-align: center;
+  height: 100px;
+}
+
+.planet-card:hover {
+  opacity: 1;
+}
+
+.planet-card img {
+  width: 75px;
+  height: 75px;
+}
+
+.planet-card-content{
+  position: absolute;
+  bottom: 0;
+  font-size: .4em;
+  text-align: center;
+
+}
+
+.horoscope-display {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.horoscope-img {
+  grid-area: 1 / 1 / 2 / 2;
+  border-style: solid;
+  padding: 0em 2.5em 0em 2.5em;
+  border-width: 0px .05px .05px 0px;
+  border-color: grey;
+}
+
+.heading-card {
+  position: relative;
+  grid-area: 1 / 2 / 2 / 7;
+  border-style: solid;
+  border-width: 0px 0px .05px 0px;
+  border-color: grey;
 }
 
 
-#sign-buttons {
+.retrogrades {
+  grid-area: 2 / 1 / 4 / 7;
+  border-style: solid;
+  padding: 4em 0em 2em 0em;
+  border-width: 0px 0px 0.05px 0px;
+  border-color: grey;
+}
 
+.moon {
+  grid-area: 4 / 1 / 7 / 3;
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  border-color: grey;
+}
+
+.horoscope {
+  grid-area: 4 / 3 / 7 / 7;
+  border-style: solid;
+  border-width: 0px .5px 0px .5px;
+  border-color: grey;
+}
+
+h3 {
+  margin: 0;
+  left: 0;
+  padding: .3em;
+}
+
+h6 {
+  font-size: .5em;
+  text-align: center;
+}
+
+h4 {
+  font-size: .5em;
+  text-align: left;
+  display: block;
+  margin: 6em;
+}
+
+.moon-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
 }
