@@ -29,8 +29,8 @@ class Retrogrades extends React.Component {
 
 
       <Router>
+        <div id="planet-heading"> PLANETS IN RETROGRADE </div>
         <div className="App">
-          <h3>PLANETS IN RETROGRADE</h3>
           <div className="planets-container">
 
             <div className = 'planet-card'><Mercury retrogrades={this.props.retrogrades} /></div>
