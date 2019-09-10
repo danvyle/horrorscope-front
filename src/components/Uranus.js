@@ -32,7 +32,9 @@ class Uranus extends React.Component {
     }
   }
 
-
+  setDisplay = () => {
+    this.setState({isPlanetClicked: !this.state.isPlanetClicked})
+  }
 
 
 
@@ -41,7 +43,7 @@ render() {
   return (
     <div className="bg">
     <img onClick = {() => this.handleClickPlanet('Uranus')} src={uraimg}/>
-    <p> {(this.props.retrogrades[7] && this.state.isPlanetClicked) ? this.props.retrogrades[7].explanation : null } </p>
+    <p> {(this.props.retrogrades[7] && this.state.isPlanetClicked && this.state.isRetrograde) ? <div className = "modal"> {this.props.retrogrades[7].explanation} <span className="close-button"> <button onClick={this.setDisplay}  className="closed">X</button> </span> </div> : null } </p>
     <p> {(this.state.isRetrograde) ? <div className = 'planet-card-content'> Uranus is in retrograde </div> : null } </p>
     </div>
   );

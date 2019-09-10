@@ -32,17 +32,19 @@ class Jupiter extends React.Component {
     }
   }
 
-
+  setDisplay = () => {
+    this.setState({isPlanetClicked: !this.state.isPlanetClicked})
+  }
 
 
 
 
 render() {
   return (
-    <div className="bg">
+    <div className="retrograde-card">
     <img onClick = {() => this.handleClickPlanet('Jupiter')} src={jupimg}/>
-    <p> {(this.props.retrogrades[3] && this.state.isPlanetClicked) ? this.props.retrogrades[3].explanation : null } </p>
-    <p> {(this.state.isRetrograde) ? <div className = 'sign-card-content'>'Jupiter is in retrograde'</div> : null } </p>
+  <p> {(this.props.retrogrades[3] && this.state.isPlanetClicked && this.state.isRetrograde) ? <div className = "modal" id = "modal"> {this.props.retrogrades[3].explanation} <span className="close-button"> <button onClick={this.setDisplay}  className="closed">X</button> </span> </div> : null } </p>
+    <p> {(this.state.isRetrograde) ? <div className = 'planet-card-content'>'Jupiter is in retrograde'</div> : null } </p>
     </div>
   );
 }

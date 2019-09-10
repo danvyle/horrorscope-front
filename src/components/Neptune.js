@@ -32,7 +32,9 @@ class Neptune extends React.Component {
     }
   }
 
-
+  setDisplay = () => {
+    this.setState({isPlanetClicked: !this.state.isPlanetClicked})
+  }
 
 
 
@@ -42,7 +44,7 @@ class Neptune extends React.Component {
       <div className="bg">
         <img onClick = {() => this.handleClickPlanet('Neptune')} src={nepimg}/>
         <p> {(this.state.isRetrograde) ? <div className = 'planet-card-content'> Neptune is in retrograde </div> : null } </p>
-        <p> {(this.props.retrogrades[6] && this.state.isPlanetClicked) ? this.props.retrogrades[6].explanation : null } </p>
+        <p> {(this.props.retrogrades[6] && this.state.isPlanetClicked && this.state.isRetrograde) ? <div className = "modal" id = "modal"> {this.props.retrogrades[6].explanation} <span className="close-button"> <button onClick={this.setDisplay}  className="closed">X</button> </span> </div> : null } </p>
       </div>
     );
   }

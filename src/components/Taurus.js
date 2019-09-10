@@ -32,12 +32,12 @@ class Taurus extends React.Component {
         <div className="horoscope-img"><img src = {tauimg}/></div>
         <div className= "heading-card">
           <h1 > HORRORSCOPES </h1>
-          <header className="retrograde-header"> LOOKS LIKE THE UNIVERSE IS TO BLAME </header>
+          <h2> LOOKS LIKE THE UNIVERSE IS TO BLAME </h2>
         </div>
-      <div className="retrogrades"><Retrogrades retrogrades = {this.state.retrogrades}/></div>
-      <div className="moon"><Moon /></div>
-      <div className="horoscope"><Horoscope horoscopes = {this.state.horoscopes}/></div>
-    </div>
+        <div className="retrogrades"><Retrogrades retrogrades = {this.state.retrogrades}/></div>
+        <div className="moon"><Moon /></div>
+        <div className="horoscope"><Horoscope horoscopes = {this.state.horoscopes}/></div>
+      </div>
     );
 
   }

@@ -32,12 +32,12 @@ class Scorpio extends React.Component {
         <div className="horoscope-img"><img src = {scoimg}/></div>
         <div className= "heading-card">
           <h1 className='h1horoscope'> HORRORSCOPES </h1>
-          <div className="retrograde-header"> LOOKS LIKE THE UNIVERSE IS TO BLAME </div>
+          <h2> LOOKS LIKE THE UNIVERSE IS TO BLAME </h2>
         </div>
-      <div className="retrogrades"><Retrogrades retrogrades = {this.state.retrogrades}/></div>
-      <div className="moon"><Moon /></div>
-      <div className="horoscope"><Horoscope horoscopes = {this.state.horoscopes}/></div>
-    </div>
+        <div className="retrogrades"><Retrogrades retrogrades = {this.state.retrogrades}/></div>
+        <div className="moon"><Moon /></div>
+        <div className="horoscope"><Horoscope horoscopes = {this.state.horoscopes}/></div>
+      </div>
     );
 
   }
