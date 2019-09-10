@@ -145,13 +145,15 @@ h5 {
   bottom: 0;
   font-size: .4em;
   text-align: center;
+  z-index: 10;
+  background-color: black;
 }
 
 .horoscope-display {
   display: grid;
   grid-template-columns: 0.8fr 0.9fr 1.3fr 1fr 1fr;
-  grid-template-rows: 1fr 0.6fr 1.4fr 1fr 1fr;
-  grid-template-areas: "img Heading Heading Heading Heading" "planets-heading planets-heading planets-heading planets-heading planets-heading" "planets planets planets planets planets" "Moon Moon horoscope horoscope horoscope" "Moon Moon horoscope horoscope horoscope";
+  grid-template-rows: 1fr 1.4fr 1fr 1fr;
+  grid-template-areas: "img Heading Heading Heading Heading" "planets planets planets planets planets" "Moon Moon horoscope horoscope horoscope" "Moon Moon horoscope horoscope horoscope";
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background-repeat:no-repeat;
@@ -179,19 +181,12 @@ h5 {
   border-color: grey;
 }
 
-#planet-heading {
-  display:block;
-  grid-area: planets-heading;
-  left: 0;
-  top: 0;
-  padding: .3em;
-}
-
 .retrogrades {
-  /* position: relative; */
+  position: relative;
   display:grid;
   grid-area: planets;
   border-color: grey;
+  top: 0;
 }
 
 .planets-container {
@@ -202,7 +197,7 @@ h5 {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-
+  margin: -3em 0em 0em 0em;
 }
 
 
@@ -221,6 +216,7 @@ h5 {
 }
 
 h3 {
+  font-size: .7em;
   display:block;
   margin: 0;
   left: 0;
@@ -249,6 +245,7 @@ h4 {
 }
 
 .modal {
+  z-index: auto;
   opacity: 1;
   display: flex;
   position: fixed;
