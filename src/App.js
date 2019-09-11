@@ -53,8 +53,6 @@ handleClickSign = (name) => {
 }
 
 
-
-
 render() {
   if (this.state.isClicked) {
     return(
