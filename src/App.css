@@ -337,3 +337,161 @@ h4 {
 html {
   background: black;
 }
+
+/* border stuff */
+.border-text {
+  width:100%;
+  position: absolute;
+  display:flex;
+  background:black;
+  white-space:nowrap;
+  font-size: .8em;
+  animation: animate 10s linear infinite;
+  margin: 0;
+  padding: 0;
+  top: 0%;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-shadow:
+  1px 1px 0 #FFFFFF,
+  1px -1px 0 #FFFFFF,
+  -1px 1px 0 #FFFFFF,
+  -1px -1px 0 #FFFFFF,
+  1px 0px 0 #FFFFFF,
+  0px 1px 0 #FFFFFF,
+  -1px 0px 0 #FFFFFF,
+  0px -1px 0px #FFFFFF,
+  1px 1px 1px #FFFFFF,
+  1px 1px 1px #FFFFFF;
+  color: #000000;
+  background: #000000;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: translateX(0);
+  }
+  100%
+  {
+    transform: translateX(-100%);
+  }
+}
+.border-text-bottom {
+  width:100%;
+  position: absolute;
+  display:flex;
+  background:black;
+  white-space:nowrap;
+  font-size: .8em;
+  animation: bottom 10s linear infinite;
+  margin: 0;
+  padding: 0;
+  top: 97%;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-shadow:
+  1px 1px 0 #FFFFFF,
+  1px -1px 0 #FFFFFF,
+  -1px 1px 0 #FFFFFF,
+  -1px -1px 0 #FFFFFF,
+  1px 0px 0 #FFFFFF,
+  0px 1px 0 #FFFFFF,
+  -1px 0px 0 #FFFFFF,
+  0px -1px 0px #FFFFFF,
+  1px 1px 1px #FFFFFF,
+  1px 1px 1px #FFFFFF;
+  color: #000000;
+  background: #000000;
+}
+
+@keyframes bottom
+{
+  0%
+  {
+    transform: rotate(180deg) translateX(0);
+  }
+  100%
+  {
+    transform: rotate(180deg) translateX(-100%);
+  }
+}
+.border-text-left {
+  width:100%;
+  position: absolute;
+  display:flex;
+  background:black;
+  white-space:nowrap;
+  font-size: .8em;
+  animation: left 10s linear infinite;
+  margin: 0;
+  padding: 0;
+  left: -49%;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-shadow:
+  1px 1px 0 #FFFFFF,
+  1px -1px 0 #FFFFFF,
+  -1px 1px 0 #FFFFFF,
+  -1px -1px 0 #FFFFFF,
+  1px 0px 0 #FFFFFF,
+  0px 1px 0 #FFFFFF,
+  -1px 0px 0 #FFFFFF,
+  0px -1px 0px #FFFFFF,
+  1px 1px 1px #FFFFFF,
+  1px 1px 1px #FFFFFF;
+  color: #000000;
+  background: #000000;
+}
+
+@keyframes left
+{
+  0%
+  {
+    transform: rotate(-90deg) translateX(0) ;
+  }
+  100%
+  {
+    transform: rotate(-90deg) translateX(-100%) ;
+  }
+}
+.border-text-right {
+  width:100%;
+  position: absolute;
+  display:flex;
+  background:black;
+  white-space:nowrap;
+  font-size: .8em;
+  animation: right 10s linear infinite;
+  margin: 0;
+  padding: 0;
+  right: -49%;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-shadow:
+  1px 1px 0 #FFFFFF,
+  1px -1px 0 #FFFFFF,
+  -1px 1px 0 #FFFFFF,
+  -1px -1px 0 #FFFFFF,
+  1px 0px 0 #FFFFFF,
+  0px 1px 0 #FFFFFF,
+  -1px 0px 0 #FFFFFF,
+  0px -1px 0px #FFFFFF,
+  1px 1px 1px #FFFFFF,
+  1px 1px 1px #FFFFFF;
+  color: #000000;
+  background: #000000;
+}
+
+@keyframes right
+{
+  0%
+  {
+    transform: rotate(90deg) translateX(0) ;
+  }
+  100%
+  {
+    transform: rotate(90deg) translateX(-100%) ;
+  }
+}
