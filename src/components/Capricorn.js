@@ -61,10 +61,12 @@ class Capricorn extends React.Component {
     }
   }
 
+  handleClickHome = () => {
+    window.open('http://localhost:3000', "_parent")
+  }
+
 
   render() {
-
-    console.log('retrograde then moon', this.retrogradeCheck(), this.whatMoonPhase())
 
     if (!this.retrogradeCheck() && !this.whatMoonPhase()) {
       return(
@@ -77,7 +79,7 @@ class Capricorn extends React.Component {
     } else {
       return (
         <div className= 'horoscope-display'>
-          <div className="horoscope-img"><img src = {capimg}/></div>
+          <div onClick = {this.handleClickHome} className="horoscope-img"> <h3>HOME</h3> <img src = {capimg}/>  </div>
           <div className= "heading-card">
             <h1 > HORRORSCOPES </h1>
             <h2> LOOKS LIKE THE UNIVERSE IS TO BLAME </h2>
