@@ -52,35 +52,7 @@ handleClickSign = (name) => {
   })
 }
 
-// componentDidMount() {
-//   let today = new Date();
-//   let from = new Date('2019-03-05');
-//   let to = new Date('2020-01-01');
-//   let from1 = new Date('2020-04-25');
-//   let to1 = new Date('2021-01-01');
-//
-//   if (from < today && today < to) {
-//     this.setState({isRetrograde: true})
-//   } else if (from1 < today && today < to1) {
-//     this.setState({isRetrograde: true})
-//   }
-// }
-//
-// whatMoonPhase = () => {
-//   let today = new Date(),
-//   month = today.getMonth() + 1,
-//   day = today.getDate(),
-//   year = today.getFullYear();
-//   function Simple(year,month,day) {
-//     var lp = 2551443;
-//     var now = new Date(year, month-1, day, 20, 35, 0);
-//     var new_moon = new Date(1970, 0, 7, 20, 35, 0);
-//     console.log('*new-moon*', new_moon)
-//     var phase = ((now.getTime() - new_moon.getTime())/1000) % lp;
-//     return Math.floor(phase /(24*3600)) + 1;
-//   }
-//   return Simple(year,month,day)
-// }
+
 
 
 render() {
