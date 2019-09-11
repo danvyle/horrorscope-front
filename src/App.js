@@ -28,18 +28,18 @@ class App extends React.Component {
     };
     this.comps = {
       Capricorn: <Capricorn />,
-    Aquarius: <Aquarius />,
-  Pisces: <Pisces />,
-Aries: <Aries />,
-Taurus: <Taurus />,
-Gemini: <Gemini />,
-Cancer: <Cancer />,
-Leo: <Leo />,
-Virgo: <Virgo />,
-Libra: <Libra />,
-Scorpio: <Scorpio />,
-Sagittarius: <Sagittarius />
-};
+      Aquarius: <Aquarius />,
+      Pisces: <Pisces />,
+      Aries: <Aries />,
+      Taurus: <Taurus />,
+      Gemini: <Gemini />,
+      Cancer: <Cancer />,
+      Leo: <Leo />,
+      Virgo: <Virgo />,
+      Libra: <Libra />,
+      Scorpio: <Scorpio />,
+      Sagittarius: <Sagittarius />
+    };
 }
 
 
@@ -56,18 +56,17 @@ handleClickSign = (name) => {
 render() {
   if (this.state.isClicked) {
     return(
-      <div className ="App">
-        <header className="App-header">
+        <div>
           {this.comps[this.state.sign] && this.comps[this.state.sign]}
-        </header>
-      </div>
+        </div>
     )
   } else {
     return(
       <div className = "App">
-        <header className="App-header"> <HoroscopeContainer handleClickSign = {this.handleClickSign} />
-      </header>
-    </div>
+        <header className="App-header">
+       <HoroscopeContainer handleClickSign = {this.handleClickSign} />
+       </header>
+       </div>
   )
 }
 }

@@ -42,7 +42,7 @@ h1 {
   text-align: center;
   justify-content: center;
   padding: 0em 10em 0em 10em;
-  font-size: .6em;
+  font-size: .75em;
   letter-spacing: .4em;
 }
 
@@ -59,8 +59,8 @@ h5 {
   display: flex;
   text-align: justify;
   justify-content: center;
-  padding: 0em 25em 0em 25em;
-  font-size: 0.6em;
+  padding: 0em 15em 0em 15em;
+  font-size: 0.5em;
   opacity: .9;
 
 }
@@ -126,6 +126,7 @@ h5 {
   opacity: .5;
   text-align: center;
   height: 5em;
+  z-index: 0;
 }
 
 .planet-card:hover {
@@ -135,6 +136,7 @@ h5 {
 .planet-card img {
   width: 75px;
   height: 75px;
+  z-index:-1;
 }
 
 .planet-card-content{
@@ -142,7 +144,7 @@ h5 {
   bottom: 0;
   font-size: .4em;
   text-align: center;
-  z-index: 10;
+  z-index: -1;
   background-color: black;
 }
 
@@ -153,8 +155,10 @@ h5 {
   grid-template-areas: "img Heading Heading Heading Heading" "planets planets planets planets planets" "Moon Moon horoscope horoscope horoscope" "Moon Moon horoscope horoscope horoscope";
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
 }
+
+
 
 .horoscope-img {
   position:relative;
@@ -167,6 +171,18 @@ h5 {
   font-size: .8em;
   opacity: .6;
 }
+
+/* .self-help-image {
+position:relative;
+text-align: center;
+grid-area: img;
+border-style: solid;
+padding: 2em 0em 0em 0em;
+border-width: 0px .05px .05px 0px;
+border-color: #1a1a1a ;
+font-size: .8em;
+opacity: .6;
+} */
 
 .horoscope-img:hover {
   opacity: 1;
@@ -192,6 +208,14 @@ h5 {
   border-color: #1a1a1a;
 }
 
+/* .books-h2 {
+position: relative;
+grid-area: Heading;
+border-style: solid;
+border-width: 0px 0px .05px 0px;
+border-color: #1a1a1a;
+} */
+
 .retrogrades {
   position: relative;
   display:grid;
@@ -199,6 +223,22 @@ h5 {
   border-color: #1a1a1a;
   top: 0;
 }
+
+/* .books {
+grid-area: books;
+position: relative;
+width: 100vw;
+} */
+
+/* .books-container {
+position: absolute;
+border-color: #1a1a1a;
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+/* flex-wrap: wrap;
+margin: -3em 0em 0em 0em;
+} */
 
 .planets-container {
   width: 100vw;
@@ -208,7 +248,8 @@ h5 {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: -3em 0em 0em 0em;
+  margin: -3.5em 0em 0em 0em;
+  z-index: 1;
 }
 
 
@@ -240,7 +281,7 @@ h6 {
 }
 
 h4 {
-  font-size: .7em;
+  font-size: .6em;
   text-align: left;
   display: block;
   margin: 3em;
@@ -256,8 +297,8 @@ h4 {
 }
 
 .modal {
-  z-index: auto;
   opacity: 1;
+  z-index: 10;
   display: flex;
   position: fixed;
   top: 50%;
@@ -287,4 +328,12 @@ h4 {
   color: white;
   padding: 2px 3px;
   font-size: 1.3rem;
+}
+
+.bg {
+  z-index: -1;
+}
+
+html {
+  background: black;
 }

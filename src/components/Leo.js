@@ -13,7 +13,8 @@ class Leo extends React.Component {
     super()
     this.state = {
       horoscopes: [],
-      retrogrades: []
+      retrogrades: [],
+      image: leoimg
     }
   }
   componentDidMount() {
@@ -71,14 +72,15 @@ class Leo extends React.Component {
   render() {
     if (!this.retrogradeCheck() && !this.whatMoonPhase()) {
       return(
-        <div className ="App">
-          <header className="App-header">
-            <SelfHelp />
-          </header>
+        <div>
+            <SelfHelp image = {this.state.image}/>
+
         </div>
       )
     } else {
       return (
+        <div className ="App">
+          <header className="App-header">
         <div className= 'horoscope-display'>
           <div onClick = {this.handleClickHome} className="horoscope-img"> <h3>HOME</h3> <img src = {leoimg}/></div>
           <div className= "heading-card">
@@ -88,6 +90,8 @@ class Leo extends React.Component {
             <div className="moon"><Moon /></div>
             <div className="horoscope"><Horoscope horoscopes = {this.state.horoscopes}/></div>
           </div>
+        </header>
+      </div>
         );
 
       }
