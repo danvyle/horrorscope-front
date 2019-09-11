@@ -37,6 +37,7 @@ class HoroscopeContainer extends React.Component {
   render() {
     return (
       <Router>
+        <div><p className='border-text'> WHY AM I BEING SO F*CKING CRAZY?!WHY AM I BEING SO F*CKING CRAZY?!WHY AM I BEING SO F*CKING CRAZY?!WHY AM I BEING SO F*CKING CRAZY?!WHY AM I BEING SO F*CKING CRAZY?!WHY AM I BEING SO F*CKING CRAZY?!WHY AM I BEING SO F*CKING CRAZY?! </p> </div>
         <div className="Horoscope">
           <header className="Horoscope-header">
             <h1 >HORRORSCOPES</h1>
