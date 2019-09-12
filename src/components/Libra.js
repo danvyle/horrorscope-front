@@ -18,7 +18,7 @@ class Libra extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/10')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/10')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,

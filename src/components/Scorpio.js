@@ -18,7 +18,7 @@ class Scorpio extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/11')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/11')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,

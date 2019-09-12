@@ -18,7 +18,7 @@ class Leo extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/8')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/8')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,

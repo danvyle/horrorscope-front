@@ -17,7 +17,7 @@ class SelfHelp extends React.Component {
 
 
   componentDidMount() {
-    fetch('http://localhost:8888/fetch_books')
+    fetch('https://horrorscope-backend.herokuapp.com/fetch_books')
     .then(resp => resp.json())
     .then(data => this.handleBooks(data['items']))
   }
@@ -33,8 +33,7 @@ class SelfHelp extends React.Component {
   render() {
     console.log(this.state.books)
     return (
-      <div className = "App">
-        <header className="App-header">
+
           <div className= 'self-help-display'>
             {(this.props.image) ? <div onClick = {this.handleClickHome} className = 'self-help-image'> <h3 className='item'>HOME</h3> <img src = {this.props.image}></img> </div>: 'no image '}
             <h2 className = 'books-h2'>LOOKS LIKE YOU ARE JUST CRAZY</h2>
@@ -51,8 +50,7 @@ class SelfHelp extends React.Component {
               </div>
             </div>
           </div>
-        </header>
-      </div>
+
     );
 
   }

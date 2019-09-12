@@ -26,7 +26,6 @@ class Moon extends React.Component {
       var lp = 2551443;
       var now = new Date(year, month-1, day, 20, 35, 0);
       var new_moon = new Date(1970, 0, 7, 20, 35, 0);
-      console.log('*new-moon*', new_moon)
       var phase = ((now.getTime() - new_moon.getTime())/1000) % lp;
       return Math.floor(phase /(24*3600)) + 1;
     }
@@ -43,6 +42,7 @@ class Moon extends React.Component {
 
 
   render() {
+    console.log('**moonphase**', this.whatMoonPhase())
 
     if (this.whatMoonPhase() >= 15 && this.whatMoonPhase() <= 18) {
       return (<div className = 'moon-container'> <h3> MOON PHASE </h3> <img src={moon}/> <h6> It's a full moon! </h6> </div>)

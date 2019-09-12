@@ -18,7 +18,7 @@ class Pisces extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/3')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/3')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,

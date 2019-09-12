@@ -19,7 +19,7 @@ class Virgo extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/9')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/9')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,

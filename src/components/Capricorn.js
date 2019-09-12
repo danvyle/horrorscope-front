@@ -18,7 +18,7 @@ class Capricorn extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/1')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/1')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,

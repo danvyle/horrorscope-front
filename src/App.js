@@ -28,21 +28,25 @@ class App extends React.Component {
     };
     this.comps = {
       Capricorn: <Capricorn />,
-      Aquarius: <Aquarius />,
-      Pisces: <Pisces />,
-      Aries: <Aries />,
-      Taurus: <Taurus />,
-      Gemini: <Gemini />,
-      Cancer: <Cancer />,
-      Leo: <Leo />,
-      Virgo: <Virgo />,
-      Libra: <Libra />,
-      Scorpio: <Scorpio />,
-      Sagittarius: <Sagittarius />
-    };
+    Aquarius: <Aquarius />,
+  Pisces: <Pisces />,
+Aries: <Aries />,
+Taurus: <Taurus />,
+Gemini: <Gemini />,
+Cancer: <Cancer />,
+Leo: <Leo />,
+Virgo: <Virgo />,
+Libra: <Libra />,
+Scorpio: <Scorpio />,
+Sagittarius: <Sagittarius />
+};
 }
 
-
+componentDidMount() {
+  fetch('https://horrorscope-backend.herokuapp.com/fetch_horoscopes')
+  .then(data => console.log(data))
+  // .then(resp => resp.json())
+}
 
 
 handleClickSign = (name) => {
@@ -56,19 +60,19 @@ handleClickSign = (name) => {
 render() {
   if (this.state.isClicked) {
     return(
-        <div>
-          {this.comps[this.state.sign] && this.comps[this.state.sign]}
-        </div>
+      <div>
+        {this.comps[this.state.sign] && this.comps[this.state.sign]}
+      </div>
     )
   } else {
     return(
       <div className = "App">
         <header className="App-header">
-       <HoroscopeContainer handleClickSign = {this.handleClickSign} />
-       </header>
-       </div>
-  )
-}
+          <HoroscopeContainer handleClickSign = {this.handleClickSign} />
+        </header>
+      </div>
+    )
+  }
 }
 }
 
