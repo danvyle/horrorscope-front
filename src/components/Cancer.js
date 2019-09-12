@@ -63,7 +63,7 @@ class Cancer extends React.Component {
   }
 
   handleClickHome = () => {
-    window.open('http://localhost:3000', "_parent")
+    window.open('https://horrorscopes.herokuapp.com/', "_parent")
   }
 
 
