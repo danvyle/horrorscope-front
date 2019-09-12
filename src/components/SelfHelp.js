@@ -33,21 +33,25 @@ class SelfHelp extends React.Component {
   render() {
     console.log(this.state.books)
     return (
-      <div className= 'self-help-display'>
-        {(this.props.image) ? <div onClick = {this.handleClickHome} className = 'self-help-image'> <h3 className='item'>HOME</h3> <img src = {this.props.image}></img> </div>: 'no image '}
-        <h2 className = 'books-h2'>LOOKS LIKE YOU ARE JUST CRAZY</h2>
-        <div className = 'books'>
-        <h1 className = 'books-h1'>TRY A SELF HELP BOOK</h1>
-          <div className="books-container">
-            {
-              this.state.books.map((book, key) => {
-                return <HelpBooks book={book} key={book.id}
-                  />
-              })
-            }
+      <div className = "App">
+        <header className="App-header">
+          <div className= 'self-help-display'>
+            {(this.props.image) ? <div onClick = {this.handleClickHome} className = 'self-help-image'> <h3 className='item'>HOME</h3> <img src = {this.props.image}></img> </div>: 'no image '}
+            <h2 className = 'books-h2'>LOOKS LIKE YOU ARE JUST CRAZY</h2>
+            <div className = 'books'>
+              <h1 className = 'books-h1'>TRY A SELF HELP BOOK</h1>
+              <div className="books-container">
+                {
+                  this.state.books.map((book, key) => {
+                    return <HelpBooks book={book} key={book.id}
+                      />
+                  })
+                }
 
+              </div>
+            </div>
           </div>
-        </div>
+        </header>
       </div>
     );
 

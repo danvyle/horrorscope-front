@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800,900&display=swap');
 
-
+body {
+  position:fixed;
+}
 .App-header {
   background-color: black;
   min-height: 100vh;
@@ -345,6 +347,7 @@ html {
   display:flex;
   background:black;
   white-space:nowrap;
+  overflow: visible;
   font-size: .8em;
   animation: animate 10s linear infinite;
   margin: 0;
@@ -466,7 +469,7 @@ html {
   animation: right 10s linear infinite;
   margin: 0;
   padding: 0;
-  right: -49%;
+  right: -51%;
   font-family: Montserrat;
   font-weight: 800;
   text-shadow:
