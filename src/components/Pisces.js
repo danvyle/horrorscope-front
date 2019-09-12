@@ -64,7 +64,7 @@ class Pisces extends React.Component {
   }
 
   handleClickHome = () => {
-    window.open('https://horrorscopes.herokuapp.com/', "_parent")
+    window.open('https://horrorscopes-front.herokuapp.com/', "_parent")
   }
 
 
