@@ -40,12 +40,11 @@ class Uranus extends React.Component {
 
 
   render() {
-
     return (
       <div className="bg">
         <img onClick = {() => this.handleClickPlanet('Uranus')} src={uraimg}/>
         <p> {(this.state.isRetrograde) ? <div className = 'planet-card-content'> Uranus is in retrograde </div> : null } </p>
-        <p> {(this.props.retrogrades[7] && this.state.isPlanetClicked && this.state.isRetrograde) ? <div className = "modal" id = "modal"> {this.props.retrogrades[7].explanation} <span className="close-button"> <button onClick={this.setDisplay}  className="closed">X</button> </span> </div> : null } </p>
+        <p> {(this.props.retrogrades[7] && this.state.isPlanetClicked && this.state.isRetrograde) ? <div className = 'background-modal'> <div className = "modal" > {this.props.retrogrades[7].explanation} <span className="close-button"> <button onClick={this.setDisplay}  className="closed">X</button> </span> </div> </div> : null } </p>
       </div>
     );
   }

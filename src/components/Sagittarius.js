@@ -18,7 +18,7 @@ class Sagittarius extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/12')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/12')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,
@@ -64,7 +64,7 @@ class Sagittarius extends React.Component {
   }
 
   handleClickHome = () => {
-    window.open('http://localhost:3000', "_parent")
+    window.open('https://horrorscopes-front.herokuapp.com/', "_parent")
   }
 
 

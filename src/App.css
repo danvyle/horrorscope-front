@@ -1,45 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800,900&display=swap');
 
-.border-text {
-  width:100%;
-  position: absolute;
-  display:flex;
-  /* overflow:hidden; */
-  background:black;
-  white-space:nowrap;
-  font-size: .8em;
-  animation: animate 12s linear infinite;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  font-family: Montserrat;
-  font-weight: 800;
-  text-shadow:
-  1px 1px 0 #FFFFFF,
-  1px -1px 0 #FFFFFF,
-  -1px 1px 0 #FFFFFF,
-  -1px -1px 0 #FFFFFF,
-  1px 0px 0 #FFFFFF,
-  0px 1px 0 #FFFFFF,
-  -1px 0px 0 #FFFFFF,
-  0px -1px 0px #FFFFFF,
-  1px 1px 1px #FFFFFF,
-  1px 1px 1px #FFFFFF;
-  color: #000000;
-  background: #000000;
-}
 
-@keyframes animate
-{
-  0%
-  {
-    transform: translateX(0);
-  }
-  100%
-  {
-    transform: translateX(-100%);
-  }
+body {
+  position:fixed;
 }
 
 .App-header {
@@ -111,6 +75,7 @@ h5 {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0em 5em 0em 5em;
+  overflow: scroll;
 }
 
 .sign-card {
@@ -135,6 +100,8 @@ h5 {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0em 5em 0em 5em;
+  overflow: scroll;
+
 }
 
 .sign-card2 {
@@ -166,17 +133,16 @@ h5 {
   opacity: .5;
   text-align: center;
   height: 5em;
-  z-index: 0;
 }
 
 .planet-card:hover {
-  opacity: 1;
+  opacity: .9;
 }
 
 .planet-card img {
+  z-index: 0;
   width: 75px;
   height: 75px;
-  z-index:-1;
 }
 
 .planet-card-content{
@@ -184,8 +150,8 @@ h5 {
   bottom: 0;
   font-size: .4em;
   text-align: center;
-  z-index: -1;
   background-color: black;
+  opacity: 1;
 }
 
 .horoscope-display {
@@ -289,7 +255,6 @@ margin: -3em 0em 0em 0em;
   flex-direction: row;
   flex-wrap: wrap;
   margin: -3.5em 0em 0em 0em;
-  z-index: 1;
 }
 
 
@@ -337,8 +302,8 @@ h4 {
 }
 
 .modal {
+  z-index: 2;
   opacity: 1;
-  z-index: 10;
   display: flex;
   position: fixed;
   top: 50%;
@@ -351,15 +316,23 @@ h4 {
   border-radius: .5em;
   overflow: auto;
   height: 20em;
-  width: 30em;
+  width: 22em;
   text-align: left;
+}
 
+.background-modal {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: black;
 }
 
 .closed {
   position: absolute;
   /* don't need to go crazy with z-index here, just sits over .modal-guts */
-  z-index: 1;
   top: 5px;
   /* needs to look OK with or without scrollbar */
   right: 5px;
@@ -368,10 +341,6 @@ h4 {
   color: white;
   padding: 2px 3px;
   font-size: 1.3rem;
-}
-
-.bg {
-  z-index: -1;
 }
 
 html {
@@ -385,8 +354,9 @@ html {
   display:flex;
   background:black;
   white-space:nowrap;
+  overflow: visible;
   font-size: .8em;
-  animation: animate 10s linear infinite;
+  animation: animate 15s linear infinite;
   margin: 0;
   padding: 0;
   top: 0%;
@@ -425,7 +395,7 @@ html {
   background:black;
   white-space:nowrap;
   font-size: .8em;
-  animation: bottom 10s linear infinite;
+  animation: bottom 15s linear infinite;
   margin: 0;
   padding: 0;
   top: 97%;
@@ -464,7 +434,7 @@ html {
   background:black;
   white-space:nowrap;
   font-size: .8em;
-  animation: left 10s linear infinite;
+  animation: left 15s linear infinite;
   margin: 0;
   padding: 0;
   left: -49%;
@@ -503,10 +473,10 @@ html {
   background:black;
   white-space:nowrap;
   font-size: .8em;
-  animation: right 10s linear infinite;
+  animation: right 15s linear infinite;
   margin: 0;
   padding: 0;
-  right: -49%;
+  right: -48.5%;
   font-family: Montserrat;
   font-weight: 800;
   text-shadow:
@@ -534,4 +504,57 @@ html {
   {
     transform: rotate(90deg) translateX(-100%) ;
   }
+}
+
+@media only screen and (max-width: 430px) {
+  /* For tablets: */
+  /* .col-s-1 {width: 8.33%;} */
+  .border-text {display: none}
+  .border-text-bottom {display: none}
+  /* .border-text-left {display: none} */
+  .border-text-right {top: 0; right: -49%}
+  .border-text-left {
+    top : 0;
+    width:100%;
+    position: absolute;
+    display:flex;
+    background:black;
+    white-space:nowrap;
+    font-size: .8em;
+    animation: left 15s linear infinite;
+    margin: 0;
+    padding: 0;
+    left: -48.5%;
+    font-family: Montserrat;
+    font-weight: 800;
+    text-shadow:
+    1px 1px 0 #FFFFFF,
+    1px -1px 0 #FFFFFF,
+    -1px 1px 0 #FFFFFF,
+    -1px -1px 0 #FFFFFF,
+    1px 0px 0 #FFFFFF,
+    0px 1px 0 #FFFFFF,
+    -1px 0px 0 #FFFFFF,
+    0px -1px 0px #FFFFFF,
+    1px 1px 1px #FFFFFF,
+    1px 1px 1px #FFFFFF;
+    color: #000000;
+    background: #000000;
+  }
+
+  @keyframes left
+  {
+    0%
+    {
+      transform: rotate(90deg) translateX(0) ;
+    }
+    100%
+    {
+      transform: rotate(90deg) translateX(-100%) ;
+    }
+  }
+  body{position: relative}
+
+
+
 }
