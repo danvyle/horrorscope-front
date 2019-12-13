@@ -17,7 +17,7 @@ class Aquarius extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/2')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/2')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,
@@ -63,7 +63,7 @@ class Aquarius extends React.Component {
   }
 
   handleClickHome = () => {
-    window.open('http://localhost:3000', "_parent")
+    window.open('https://horrorscopes-front.herokuapp.com/', "_parent")
   }
 
 

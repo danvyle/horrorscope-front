@@ -19,7 +19,7 @@ class Virgo extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8888/signs/9')
+    fetch('https://horrorscope-backend.herokuapp.com/signs/9')
     .then(resp => resp.json())
     .then(data => this.setState({
       horoscopes: data.horoscopes,
@@ -65,7 +65,7 @@ class Virgo extends React.Component {
   }
 
   handleClickHome = () => {
-    window.open('http://localhost:3000', "_parent")
+    window.open('https://horrorscopes-front.herokuapp.com/', "_parent")
   }
 
 
