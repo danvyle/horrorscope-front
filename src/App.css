@@ -138,7 +138,6 @@ h5 {
 }
 
 .planet-card img {
-  z-index: 0;
   width: 75px;
   height: 75px;
 }
@@ -319,7 +318,6 @@ h4 {
 }
 
 .background-modal {
-  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
