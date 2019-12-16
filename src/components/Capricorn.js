@@ -68,7 +68,7 @@ class Capricorn extends React.Component {
 
 
   render() {
-    if (this.retrogradeCheck() && !this.whatMoonPhase()) {
+    if (!this.retrogradeCheck() && !this.whatMoonPhase()) {
       return(
         <div>
           <SelfHelp image = {this.state.image} />
