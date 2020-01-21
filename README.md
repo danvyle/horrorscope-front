@@ -1,8 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## HORRORSCOPES
 
-## Available Scripts
+The app can be found here: https://horrorscopes-front.herokuapp.com/
 
-In the project directory, you can run:
+## Motivation 
+
+Do you ever feel crazy and wonder if there's something else to blame? Is Mercury in retrograde? Is there a full moon? Let me check my horoscope today... the motivation here was for a quick reference guide to anything that could explain away your or the universe's odd behavior. 
+
+## About this project
+
+This is a horoscope app, aptly named Horrorscopes. It's a quick-reference guide for astrological signs to find an excuse for what could be wrong with them, whether it be an ominous daily horoscope, planets in retrograde or a full moon. 
+
+*Please note that Capricorn's horoscope is rigged to show the opposite of full moon and planets in retrograde. The month of January has almost zero planets in retrograde so Capricorn may be the only normal sign if you view the site within the next week. (ALSO: Please forgive any slow lag times as it is hosted on a free heroku account)
+
+<!-- add screenshots and images later -->
+
+<!-- Features
+What makes your project stand out?
+
+Code Example
+Show what the library does as concisely as possible, developers should be able to figure out how your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+
+Installation
+Provide step by step series of examples and explanations about how to get a development env running.
+
+API Reference
+Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+
+Tests
+Describe and show how to run the tests with code examples.
+
+How to use?
+If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
+
+Contribute
+Let people know how they can contribute into your project. A contributing guideline will be a big plus.
+
+Credits -->
 
 ### `npm start`
 
@@ -12,111 +45,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-Pluto: April 24, 2019 - Oct 3, 2019
-      April 25, 2020 - Oct 4, 2020
-
-Neptune: June 21 2019- November 27, 2019
-        June 23 2020 - November 29, 2020
-
-Uranus:
-        August 12, 2019 - January 1, 2020
-        August 15, 2020 - January 1, 2021
-
-Mercury: March 5 to 28 2019
-    July 7 to August 2 2019
-    October 31 to November 20 2019
-    17th February-10th March 2020
-    18th June-12th July 2020
-    14th October-3rd November 2020
-
-Venus: 13th May-25th June 2020
-
-Jupiter: April 10th-August 11th 2019
-        14th May-13th September 2020
-
-Saturn:  April 30th-September 18th 2019
-        11th May-29th September
-
-Mars: 9th September-14th November 2020
-
-
-Pluto: March 5, 2019 - January 1, 2020
-      17th February-10th March 2020  April 25, 2020 - January 1, 2021
-
-
-
-
-
-
-
-  // this.setState({ horoscopes : data.horoscopes })))
-
-
-
-  <Route exact path='/capricorn'  exact component={Capricorn} />
-  <Route exact path='/aquarius'  exact component={Aquarius} />
-  <Route exact path='/pisces'  exact component={Pisces} />
-  <Route exact path='/aries'  exact component={Aries} />
-  <Route exact path='/taurus'  exact component={Taurus} />
-  <Route exact path='/gemini'  exact component={Gemini} />
-  <Route exact path='/cancer'  exact component={Cancer} />
-  <Route exact path='/leo'  exact component={Leo} />
-  <Route exact path='/virgo'  exact component={Virgo} />
-  <Route exact path='/libra'  exact component={Libra} />
-  <Route exact path='/scorpio'  exact component={Scorpio} />
-  <Route exact path='/sagittarius'  exact component={Sagittarius} />
