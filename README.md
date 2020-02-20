@@ -1,5 +1,7 @@
 ## HORRORSCOPES
 
+![Horrorscope home page](src/images/horrorscopehomepage.png)
+
 The app can be found here: https://horrorscopes-front.herokuapp.com/
 
 ## Motivation 
@@ -14,34 +16,83 @@ This is a horoscope app, aptly named Horrorscopes. It's a quick-reference guide 
 
 <!-- add screenshots and images later -->
 
-<!-- Features
-What makes your project stand out?
+## Features
+Some unique features of the website include a easter egg for when there aren't any planets in retrograde and the moon isn't full. It sends you to a self help page, called from google books API. If clicked, you will be taken to a new site.
 
-Code Example
-Show what the library does as concisely as possible, developers should be able to figure out how your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+![selfhelppage](src/images/selfhelppage.png)
 
-Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+## Code Example
 
-API Reference
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+```js
+ whatMoonPhase = () => {
+    let today = new Date(),
+    month = today.getMonth() + 1,
+    day = today.getDate(),
+    year = today.getFullYear();
+    function Simple(year,month,day) {
+      var lp = 2551443;
+      var now = new Date(year, month-1, day, 20, 35, 0);
+      var new_moon = new Date(1970, 0, 7, 20, 35, 0);
+      console.log('*new-moon*', new_moon)
+      var phase = ((now.getTime() - new_moon.getTime())/1000) % lp;
+      return Math.floor(phase /(24*3600)) + 1;
+    }
+    return Simple(year,month,day)
+  }
 
-Tests
-Describe and show how to run the tests with code examples.
+```
 
-How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
+## Installation
 
-Contribute
-Let people know how they can contribute into your project. A contributing guideline will be a big plus.
+Clone repo, change directories into repo. 
 
-Credits -->
+`$npm install && npm start` 
 
-### `npm start`
-
-Runs the app in the development mode.<br>
+This should get the correct dependencies installed and runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+## API Reference
+The APIs used in Horrorscopes are
+
+[Google Books API]("https://www.googleapis.com/books/")
+
+[Daily horoscope API](http://ohmanda.com/api/horoscope)
+
+
+## How to use?
+Find and click on your sign
+
+If there are any planets in retrograde, there will be an indicator stating it. You will be able to click it and a modal will pop up sharing how this planet directly affects your sign. Click X at the top to exit. 
+
+![picture of mercury in retrograde](src/images/mercuryinretrograde.png)
+
+Your daily horoscope is found in the bottom right.
+
+Moon phase can be found on your bottom left. For the sake of simplicity, moon phases have been calculated into 4 phases vs. the 8 phases it normally goes through. 
+
+To exit and view other horoscopes, click your sign on the upper left to go back to the home page.
+
+Thank you for using my Horrorscope app!
+
+Contribute
+
+If you'd like to contribute: 
+
+**Bug fixes I'm working on:** 
+
+* The modal appearance. Some modals will show up with the planets still highlighted in the modal and some will be fine and the modal background shows all black
+
+**Features I'd like to work on:**
+
+* Having access to previous daily horoscopes
+* Have planets in retrograde glowing to entice readers to click
+* Creating a interval fetch versus a backend fetch for daily horoscopes
+* and more.
+
+
+
+
 
