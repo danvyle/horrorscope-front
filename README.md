@@ -1,61 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## HORRORSCOPES
 
-## Available Scripts
+![Horrorscope home page](src/images/horrorscopehomepage.png)
 
-In the project directory, you can run:
+The app can be found here: https://horrorscopes-front.herokuapp.com/
 
-### `npm start`
+## Motivation 
 
-Runs the app in the development mode.<br>
-Open [https://horrorscopes-front.herokuapp.com/](https://horrorscopes-front.herokuapp.com/) to view it in the browser.
+Do you ever feel crazy and wonder if there's something else to blame? Is Mercury in retrograde? Is there a full moon? Let me check my horoscope today... the motivation here was for a quick reference guide to anything that could explain away your or the universe's odd behavior. 
+
+## About this project
+
+This is a horoscope app, aptly named Horrorscopes. It's a quick-reference guide for astrological signs to find an excuse for what could be wrong with them, whether it be an ominous daily horoscope, planets in retrograde or a full moon. 
+
+*Please note that Capricorn's horoscope is rigged to show the opposite of full moon and planets in retrograde. The month of January has almost zero planets in retrograde so Capricorn may be the only normal sign if you view the site within the next week. (ALSO: Please forgive any slow lag times as it is hosted on a free heroku account)
+
+## Features
+Some unique features of the website include a easter egg for when there aren't any planets in retrograde and the moon isn't full. It sends you to a self help page, called from google books API. If clicked, you will be taken to a new site.
+
+![selfhelppage](src/images/selfhelppage.png)
+
+## Code Example
+
+```js
+ whatMoonPhase = () => {
+    let today = new Date(),
+    month = today.getMonth() + 1,
+    day = today.getDate(),
+    year = today.getFullYear();
+    function Simple(year,month,day) {
+      var lp = 2551443;
+      var now = new Date(year, month-1, day, 20, 35, 0);
+      var new_moon = new Date(1970, 0, 7, 20, 35, 0);
+      console.log('*new-moon*', new_moon)
+      var phase = ((now.getTime() - new_moon.getTime())/1000) % lp;
+      return Math.floor(phase /(24*3600)) + 1;
+    }
+    return Simple(year,month,day)
+  }
+
+```
+
+## Installation
+
+Clone repo, change directories into repo. 
+
+`$npm install && npm start` 
+
+This should get the correct dependencies installed and runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+## API Reference
+The APIs used in Horrorscopes are
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+[Google Books API]("https://www.googleapis.com/books/")
 
 
-
-### Advanced Configuration
-
-
-### Deployment
+[Daily horoscope API](http://ohmanda.com/api/horoscope)
 
 
-The retrogrades for the following planets are listed below for the next 2 years:
+## How to use?
+Find and click on your sign
 
-Pluto: April 24, 2019 - Oct 3, 2019
-      April 25, 2020 - Oct 4, 2020
+If there are any planets in retrograde, there will be an indicator stating it. You will be able to click it and a modal will pop up sharing how this planet directly affects your sign. Click X at the top to exit. 
 
-Neptune: June 21 2019- November 27, 2019
-        June 23 2020 - November 29, 2020
+![picture of mercury in retrograde](src/images/mercuryinretrograde.png)
 
-Uranus:
-        August 12, 2019 - January 1, 2020
-        August 15, 2020 - January 1, 2021
+Your daily horoscope is found in the bottom right.
 
-Mercury: March 5 to 28 2019
-    July 7 to August 2 2019
-    October 31 to November 20 2019
-    17th February-10th March 2020
-    18th June-12th July 2020
-    14th October-3rd November 2020
+Moon phase can be found on your bottom left. For the sake of simplicity, moon phases have been calculated into 4 phases vs. the 8 phases it normally goes through. 
 
-Venus: 13th May-25th June 2020
+To exit and view other horoscopes, click your sign on the upper left to go back to the home page.
 
-Jupiter: April 10th-August 11th 2019
-        14th May-13th September 2020
+Thank you for using my Horrorscope app!
 
-Saturn:  April 30th-September 18th 2019
-        11th May-29th September
+## Contribute
 
-Mars: 9th September-14th November 2020
+If you'd like to contribute: 
 
+**Bug fixes I'm working on:** 
 
-Pluto: March 5, 2019 - January 1, 2020
-      17th February-10th March 2020  April 25, 2020 - January 1, 2021
+* The modal appearance. Some modals will show up with the planets still highlighted in the modal and some will be fine and the modal background shows all black
+
+**Features I'd like to work on:**
+
+* Having access to previous daily horoscopes
+* Have planets in retrograde glowing to entice readers to click
+* Creating a interval fetch versus a backend fetch for daily horoscopes
+* and more.
