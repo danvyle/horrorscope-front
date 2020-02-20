@@ -30,7 +30,7 @@ class Aquarius extends React.Component {
     let today = new Date();
     let from = new Date('2019-03-05');
     let to = new Date('2020-01-01');
-    let from1 = new Date('2020-04-25');
+    let from1 = new Date('2020-02-17');
     let to1 = new Date('2021-01-01');
 
     if (from < today && today < to) {

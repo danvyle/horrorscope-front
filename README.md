@@ -4,6 +4,8 @@
 
 The app can be found here: https://horrorscopes-front.herokuapp.com/
 
+(Please forgive any slow lag times as it is hosted on a free heroku account)
+
 ## Motivation 
 
 Do you ever feel crazy and wonder if there's something else to blame? Is Mercury in retrograde? Is there a full moon? Let me check my horoscope today... the motivation here was for a quick reference guide to anything that could explain away your or the universe's odd behavior. 
@@ -12,7 +14,7 @@ Do you ever feel crazy and wonder if there's something else to blame? Is Mercury
 
 This is a horoscope app, aptly named Horrorscopes. It's a quick-reference guide for astrological signs to find an excuse for what could be wrong with them, whether it be an ominous daily horoscope, planets in retrograde or a full moon. 
 
-*Please note that Capricorn's horoscope is rigged to show the opposite of full moon and planets in retrograde. The month of January has almost zero planets in retrograde so Capricorn may be the only normal sign if you view the site within the next week. (ALSO: Please forgive any slow lag times as it is hosted on a free heroku account)
+
 
 ## Features
 Some unique features of the website include a easter egg for when there aren't any planets in retrograde and the moon isn't full. It sends you to a self help page, called from google books API. If clicked, you will be taken to a new site.
