@@ -14,8 +14,6 @@ This is a horoscope app, aptly named Horrorscopes. It's a quick-reference guide 
 
 *Please note that Capricorn's horoscope is rigged to show the opposite of full moon and planets in retrograde. The month of January has almost zero planets in retrograde so Capricorn may be the only normal sign if you view the site within the next week. (ALSO: Please forgive any slow lag times as it is hosted on a free heroku account)
 
-<!-- add screenshots and images later -->
-
 ## Features
 Some unique features of the website include a easter egg for when there aren't any planets in retrograde and the moon isn't full. It sends you to a self help page, called from google books API. If clicked, you will be taken to a new site.
 
@@ -59,6 +57,7 @@ The APIs used in Horrorscopes are
 
 [Google Books API]("https://www.googleapis.com/books/")
 
+
 [Daily horoscope API](http://ohmanda.com/api/horoscope)
 
 
@@ -77,7 +76,7 @@ To exit and view other horoscopes, click your sign on the upper left to go back 
 
 Thank you for using my Horrorscope app!
 
-Contribute
+## Contribute
 
 If you'd like to contribute: 
 
@@ -91,8 +90,3 @@ If you'd like to contribute:
 * Have planets in retrograde glowing to entice readers to click
 * Creating a interval fetch versus a backend fetch for daily horoscopes
 * and more.
-
-
-
-
-

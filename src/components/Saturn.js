@@ -45,7 +45,7 @@ class Saturn extends React.Component {
       <div className="bg">
         <img onClick = {() => this.handleClickPlanet('Saturn')} src={satimg}/>
         <p> {(this.state.isRetrograde) ? <div className = 'planet-card-content'> Saturn is in retrograde </div> : null } </p>
-        <p> {(this.props.retrogrades[4] && this.state.isPlanetClicked && this.state.isRetrograde) ? <div className = "modal" id = "modal"> {this.props.retrogrades[4].explanation} <span className="close-button"> <button onClick={this.setDisplay}  className="closed">X</button> </span> </div> : null } </p>
+        <p> {(this.props.retrogrades[4] && this.state.isPlanetClicked && this.state.isRetrograde) ? <div className = 'background-modal'> <div className = "modal"> {this.props.retrogrades[4].explanation} <span className="close-button"> <button onClick={this.setDisplay}  className="closed">X</button> </span> </div> </div> : null } </p>
       </div>
     );
   }
